@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import SectionEducation from './components/SectionEducation'
+import SectionExperience from './components/SectionExperience'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <SectionEducation
+                title="Education"
+                data={[
+                    {school:'School 1', qualification:'qualification 1', grade:'pass'},
+                    {school:'School 2', qualification:'qualification 2', grade:'pass'}
+                ]}
+            />
+            <SectionExperience 
+                title="Experiences"
+                data={[
+                    {employer:'Cadent Gas', role:'Lead Performance and Reporting MI Developer', start:'06/2011',end:'present'},
+                    {employer:'Job 2', role:'role 2', reponsibilities:'pass'},
+                ]}
+            />
     </div>
   );
 }
